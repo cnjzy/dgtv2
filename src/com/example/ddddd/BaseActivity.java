@@ -6,7 +6,7 @@ import java.util.Map;
 import org.json.JSONObject;
 
 import android.app.Activity;
-import android.content.Intent;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Toast;
@@ -24,7 +24,10 @@ public class BaseActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
+		/**
+		 * 始终控制媒体音量
+		 */
+		 this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
 		super.onCreate(savedInstanceState);
 	}
 
@@ -66,9 +69,9 @@ public class BaseActivity extends Activity {
 							String orderNo = dataObj.getString("order_no");
 							int mStrPayMode = pay_type == 1 ? 2 : 1;
 							// 正式 38
-//							PayUtils.pay(context, orderNo, String.valueOf(mStrPayMode), String.valueOf(Utils.amount * 100));
-							//测试1分
-							PayUtils.pay(context, orderNo, String.valueOf(mStrPayMode), String.valueOf(1));
+							PayUtils.pay(context, orderNo, String.valueOf(mStrPayMode), String.valueOf(Utils.amount));
+							// 测试1元
+//							PayUtils.pay(context, orderNo, String.valueOf(mStrPayMode), String.valueOf(1));
 						}
 					} else {
 						Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
@@ -103,6 +106,8 @@ public class BaseActivity extends Activity {
 		params.put("amount", amount + "");
 		params.put("pay_type", pay_type + "");
 		params.put("member_type", member_type + "");
+		params.put("channel", DeviceUtils.getChannelName(context, "UMENG_CHANNEL"));
+		params.put("version", String.valueOf(DeviceUtils.getVersionCode(context)));
 		NetUtils.getPost(Utils.URL_GET_ORDER, params, handler);
 	}
 

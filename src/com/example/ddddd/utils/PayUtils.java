@@ -26,7 +26,7 @@ public class PayUtils {
 		params.put("pay_mode", mStrPayMode); // 支付方式：1：微信;2:支付宝
 		params.put("order_id", orderNo); // 订单号
 		params.put("pay_amt", amount); // 支付金额
-		params.put("notify_url", "http://api.76iw.com/order/notify"); // 回调URL
+		params.put("notify_url", "http://api.76iw.com/order/hftnotify"); // 回调URL
 		params.put("goods_name", "终身会员"); // 商品名称
 		params.put("goods_note", "终身会员"); // 商品价格信息 // 可为空
 		params.put("extends_info", "无"); // 标记
