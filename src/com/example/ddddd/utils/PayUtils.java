@@ -12,12 +12,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.ddddd.MyApp;
 import com.hft.juhepay.api.HftJuhePay;
 import com.hft.juhepay.api.OnPayFinishedListener;
 
 public class PayUtils {
 
-	private static final String PAGETAG = "";
+	private static final String PAGETAG = "dddddd";
 
 	public static void pay(final Activity mContext, String orderNo, String mStrPayMode, String amount) {
 		HashMap<String, String> params = new HashMap<String, String>();
@@ -35,6 +36,10 @@ public class PayUtils {
 			@Override
 			public void onPaySuccess(Map params) {
 				// TODO Auto-generated method stub
+				UMengUtils.addPaySuccess(mContext);
+				MyApp.p.putInt("userType", Utils.VIP);
+				mContext.finish();
+				
 				Toast.makeText(mContext, "支付成功", Toast.LENGTH_SHORT).show();
 				String mStrOrderId = ((Map<String, String>) params).get("order_id");
 				String mStrTotalAmount = ((Map<String, String>) params).get("total_amt");
@@ -43,6 +48,7 @@ public class PayUtils {
 				String mStrGoodsNum = ((Map<String, String>) params).get("goods_num");
 				String mStrExtendsInfo = ((Map<String, String>) params).get("extends_info");
 				Log.i(PAGETAG, "params=" + params.toString());
+				
 			}
 
 			@Override

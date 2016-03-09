@@ -103,27 +103,4 @@ public class BaseActivity extends Activity {
 		NetUtils.getPost(Utils.URL_GET_ORDER, params, handler);
 	}
 
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		super.onActivityResult(requestCode, resultCode, data);
-		try {
-			if (data != null) {
-				int code = data.getIntExtra("code", 1);
-				String value = data.getStringExtra("info");
-				if (resultCode == 0) {// 充值
-					if (code == 0) {// 充值成功
-						UMengUtils.addPaySuccess(context);
-						System.err.println("=======code=" + code + ",info=" + value);
-						MyApp.p.putInt("userType", Utils.VIP);
-						Toast.makeText(this, "充值成功!", Toast.LENGTH_LONG).show();
-						finish();
-					} else {// 充值失败
-
-					}
-				}
-			}
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
-	}
 }
