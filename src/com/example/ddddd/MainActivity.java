@@ -3,7 +3,6 @@ package com.example.ddddd;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,7 +14,6 @@ import com.example.ddddd.utils.UMengUtils;
 import com.example.ddddd.utils.Utils;
 import com.imageview.switchview.Image3DSwitchView;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.wo.main.WP_SDK;
 
 public class MainActivity extends BaseActivity {
 

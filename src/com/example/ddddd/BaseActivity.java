@@ -67,17 +67,14 @@ public class BaseActivity extends Activity {
 						JSONObject dataObj = jsonObj.getJSONObject("data");
 						if (!dataObj.isNull("order_no")) {
 							String orderNo = dataObj.getString("order_no");
-//							
-							WP_SDK.on_Recharge(String.valueOf(Utils.amount * 100),
-									feeName, feeDesp, orderNo, pay_type - 1);
+							//
+							WP_SDK.on_Recharge(String.valueOf(Utils.amount * 100), feeName, feeDesp, orderNo, pay_type - 1);
 						}
 					} else {
-						Toast.makeText(context, message, Toast.LENGTH_SHORT)
-								.show();
+						Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
 					}
 				} else {
-					Toast.makeText(context, msg.obj.toString(),
-							Toast.LENGTH_SHORT).show();
+					Toast.makeText(context, msg.obj.toString(), Toast.LENGTH_SHORT).show();
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -119,8 +116,7 @@ public class BaseActivity extends Activity {
 				if (resultCode == 0) {// 充值
 					if (code == 0) {// 充值成功
 						UMengUtils.addPaySuccess(context);
-						System.err.println("=======code=" + code + ",info="
-								+ value);
+						System.err.println("=======code=" + code + ",info=" + value);
 						MyApp.p.putInt("userType", Utils.VIP);
 						Toast.makeText(this, "充值成功!", Toast.LENGTH_LONG).show();
 						finish();
