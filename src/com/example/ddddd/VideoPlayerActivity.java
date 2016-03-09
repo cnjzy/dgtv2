@@ -1,15 +1,8 @@
 package com.example.ddddd;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
@@ -17,21 +10,15 @@ import android.media.MediaPlayer.OnPreparedListener;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.Handler;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.MediaController;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.VideoView;
 
-import com.example.ddddd.utils.DeviceUtils;
 import com.example.ddddd.utils.DialogUtils;
 import com.example.ddddd.utils.DialogUtils.OnAlertSelectId;
-import com.example.ddddd.utils.NetUtils;
-import com.example.ddddd.utils.UMengUtils;
 import com.example.ddddd.utils.Utils;
-import com.wo.main.WP_SDK;
 
 public class VideoPlayerActivity extends BaseActivity implements
 		MediaPlayer.OnErrorListener, MediaPlayer.OnCompletionListener {
@@ -85,9 +72,6 @@ public class VideoPlayerActivity extends BaseActivity implements
 			mMediaController = new MediaController(this);
 			mVideoView.setMediaController(mMediaController);
 		}else{
-			// 支付SDK
-			WP_SDK.on_Init(this, null);
-			
 			video_count_down_tv.setVisibility(View.VISIBLE);
             contDownTimer = new CountDownTimer(countDown * 1000, 1000) {  
                 public void onTick(long millisUntilFinished) {

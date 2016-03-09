@@ -10,7 +10,6 @@ import com.example.ddddd.adapter.DetailAdapter;
 import com.example.ddddd.utils.DialogUtils;
 import com.example.ddddd.utils.DialogUtils.OnAlertSelectId;
 import com.example.ddddd.utils.Utils;
-import com.wo.main.WP_SDK;
 
 public class DetailActivity extends BaseActivity{
 	private ListView list;
@@ -25,9 +24,6 @@ public class DetailActivity extends BaseActivity{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_detail);
-		
-		// 支付SDK
-		WP_SDK.on_Init(this, null);
 		
 		list = ((ListView)findViewById(R.id.list));
 	    int i = getIntent().getIntExtra("clickposition", 1);
