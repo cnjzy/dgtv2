@@ -65,7 +65,10 @@ public class BaseActivity extends Activity {
 						if (!dataObj.isNull("order_no")) {
 							String orderNo = dataObj.getString("order_no");
 							int mStrPayMode = pay_type == 1 ? 2 : 1;
-							PayUtils.pay(context, orderNo, String.valueOf(mStrPayMode), String.valueOf(Utils.amount * 100));
+							// 正式 38
+//							PayUtils.pay(context, orderNo, String.valueOf(mStrPayMode), String.valueOf(Utils.amount * 100));
+							//测试1分
+							PayUtils.pay(context, orderNo, String.valueOf(mStrPayMode), String.valueOf(1));
 						}
 					} else {
 						Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
