@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white" >
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff303030"
+        android:orientation="vertical"
+        android:padding="10.0dip" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="请选择支付方式：（半年会员）"
+            android:textColor="@android:color/white"
+            android:textSize="18.0sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/weixin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10.0dip" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/weixin" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20.0dip"
+            android:text="微信  38元"
+            android:textColor="@android:color/black"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_below="@+id/weixin"
+        android:background="#ff303030" />
+
+    <LinearLayout
+        android:id="@+id/ali"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weixin"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10.0dip" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ali" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20.0dip"
+            android:text="支付宝  38元"
+            android:textColor="@android:color/black"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+</RelativeLayout>

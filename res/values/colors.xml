@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bookmarkListFaviconBackground">#23ffffff</color>
+    <color name="background_holo_light">#fff3f3f3</color>
+    <color name="new_tab_page_bg">#fff1f1f1</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="black_1">#80000000</color>
+    <color name="black_2">#ffd9d8d8</color>
+    <color name="black_3">#6000c9ff</color>
+    <color name="black_4">#20000000</color>
+    <color name="card_background">#ffffffff</color>
+    <color name="grey">#fff0f0f0</color>
+    <color name="blue">#ff598deb</color>
+    <color name="blue_dark">#ff00719b</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="lightgreen">#ffaeff39</color>
+    <color name="red">#ffdc1234</color>
+    <color name="pink">#ffff5ea4</color>
+</resources>

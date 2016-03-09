@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/top_bg" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="资源专区"
+            android:textColor="@color/white"
+            android:textSize="17.0dip" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="100.0dip" >
+
+                    <com.imageview.switchview.Image3DSwitchView
+                        android:id="@+id/image_switch_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="100.0dip" >
+
+                        <com.imageview.switchview.Image3DView
+                            android:id="@+id/image1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:onClick="imageOnClick"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/image1" />
+
+                        <com.imageview.switchview.Image3DView
+                            android:id="@+id/image2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:onClick="imageOnClick"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/image2" />
+
+                        <com.imageview.switchview.Image3DView
+                            android:id="@+id/image3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:onClick="imageOnClick"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/image3" />
+
+                        <com.imageview.switchview.Image3DView
+                            android:id="@+id/image4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:onClick="imageOnClick"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/image4" />
+
+                        <com.imageview.switchview.Image3DView
+                            android:id="@+id/image5"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:onClick="imageOnClick"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/image5" />
+                    </com.imageview.switchview.Image3DSwitchView>
+                </FrameLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="4.0dip"
+                    android:background="#ffd1d1d1" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="11.0px"
+                    android:paddingRight="11.0px" >
+
+                    <View
+                        android:id="@+id/view_top"
+                        android:layout_width="5.0dip"
+                        android:layout_height="15.0dip"
+                        android:layout_marginLeft="7.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_marginTop="8.0dip"
+                        android:background="@color/red" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/view_top"
+                        android:text="免费试用区"
+                        android:textColor="#ff000000"
+                        android:textSize="18.0dip" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_top"
+                        android:layout_marginTop="8.0dip"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/shikan_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5.0px"
+                            android:layout_weight="1.0"
+                            android:adjustViewBounds="true"
+                            android:onClick="imageOnClick"
+                            android:src="@drawable/shikan_1" />
+
+                        <ImageView
+                            android:id="@+id/shikan_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0px"
+                            android:layout_weight="1.0"
+                            android:adjustViewBounds="true"
+                            android:onClick="imageOnClick"
+                            android:src="@drawable/shikan_2" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="4.0dip"
+                    android:background="#ffd1d1d1" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="11.0px"
+                    android:paddingRight="11.0px" >
+
+                    <View
+                        android:id="@+id/view_top1"
+                        android:layout_width="5.0dip"
+                        android:layout_height="15.0dip"
+                        android:layout_marginLeft="7.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_marginTop="8.0dip"
+                        android:background="@color/red" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/view_top1"
+                        android:text="会员专区"
+                        android:textColor="#ff000000"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:id="@+id/refresh_date1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5.0dip"
+                        android:layout_marginTop="8.0dip"
+                        android:text="最近更新日期：03-01"
+                        android:textColor="#ff555555"
+                        android:textSize="13.0dip" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_top1"
+                        android:layout_marginTop="8.0dip"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/mv_1_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5.0px"
+                                android:layout_weight="1.0"
+                                android:adjustViewBounds="true"
+                                android:onClick="imageOnClick"
+                                android:src="@drawable/image1_1" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0px"
+                                android:layout_weight="1.0"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:id="@+id/mv_1_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5.0px"
+                                    android:adjustViewBounds="true"
+                                    android:onClick="imageOnClick"
+                                    android:src="@drawable/image1_2" />
+
+                                <ImageView
+                                    android:id="@+id/mv_1_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5.0px"
+                                    android:adjustViewBounds="true"
+                                    android:onClick="imageOnClick"
+                                    android:src="@drawable/image1_3" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10.0px"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/mv_1_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5.0px"
+                                android:layout_weight="1.0"
+                                android:adjustViewBounds="true"
+                                android:onClick="imageOnClick"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/image_back2" />
+
+                            <ImageView
+                                android:id="@+id/mv_1_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0px"
+                                android:layout_weight="1.0"
+                                android:adjustViewBounds="true"
+                                android:onClick="imageOnClick"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/image_back2" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="4.0dip"
+                    android:background="#ffd1d1d1" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="11.0px"
+                    android:paddingRight="11.0px" >
+
+                    <View
+                        android:id="@+id/view_top2"
+                        android:layout_width="5.0dip"
+                        android:layout_height="15.0dip"
+                        android:layout_marginLeft="7.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_marginTop="8.0dip"
+                        android:background="@color/red" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/view_top2"
+                        android:text="日韩女优区"
+                        android:textColor="#ff000000"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:id="@+id/refresh_date2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5.0dip"
+                        android:layout_marginTop="8.0dip"
+                        android:text="最近更新日期：03-01"
+                        android:textColor="#ff555555"
+                        android:textSize="13.0dip" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_top2"
+                        android:layout_marginTop="8.0dip"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/mv_2_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5.0px"
+                                android:layout_weight="1.0"
+                                android:adjustViewBounds="true"
+                                android:onClick="imageOnClick"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/image_back1" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0px"
+                                android:layout_weight="1.0"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:id="@+id/mv_2_2"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5.0px"
+                                    android:adjustViewBounds="true"
+                                    android:layout_weight="1"
+                                    android:onClick="imageOnClick"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/image_back2" />
+
+                                <ImageView
+                                    android:id="@+id/mv_2_3"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5.0px"
+                                    android:adjustViewBounds="true"
+                                    android:layout_weight="1"
+                                    android:onClick="imageOnClick"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/image_back2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10.0px"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/mv_2_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5.0px"
+                                android:layout_weight="1.0"
+                                android:adjustViewBounds="true"
+                                android:onClick="imageOnClick"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/image_back2" />
+
+                            <ImageView
+                                android:id="@+id/mv_2_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0px"
+                                android:layout_weight="1.0"
+                                android:adjustViewBounds="true"
+                                android:onClick="imageOnClick"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/image_back2" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="4.0dip"
+                    android:background="#ffd1d1d1" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="11.0px"
+                    android:paddingRight="11.0px" >
+
+                    <View
+                        android:id="@+id/view_top3"
+                        android:layout_width="5.0dip"
+                        android:layout_height="15.0dip"
+                        android:layout_marginLeft="7.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_marginTop="8.0dip"
+                        android:background="@color/red" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/view_top3"
+                        android:text="制服诱惑区"
+                        android:textColor="#ff000000"
+                        android:textSize="18.0dip" />
+
+                    <TextView
+                        android:id="@+id/refresh_date3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5.0dip"
+                        android:layout_marginTop="8.0dip"
+                        android:text="最近更新日期：03-01"
+                        android:textColor="#ff555555"
+                        android:textSize="13.0dip" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_top3"
+                        android:layout_marginTop="8.0dip"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/mv_3_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5.0px"
+                                android:layout_weight="1.0"
+                                android:adjustViewBounds="true"
+                                android:onClick="imageOnClick"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/image_back1" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0px"
+                                android:layout_weight="1.0"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:id="@+id/mv_3_2"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5.0px"
+                                    android:adjustViewBounds="true"
+                                    android:layout_weight="1"
+                                    android:onClick="imageOnClick"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/image_back2" />
+
+                                <ImageView
+                                    android:id="@+id/mv_3_3"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5.0px"
+                                    android:layout_weight="1"
+                                    android:adjustViewBounds="true"
+                                    android:onClick="imageOnClick"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/image_back2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10.0px"
+                            android:layout_marginTop="10.0px"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/mv_3_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5.0px"
+                                android:layout_weight="1.0"
+                                android:adjustViewBounds="true"
+                                android:onClick="imageOnClick"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/image_back2" />
+
+                            <ImageView
+                                android:id="@+id/mv_3_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0px"
+                                android:layout_weight="1.0"
+                                android:adjustViewBounds="true"
+                                android:onClick="imageOnClick"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/image_back2" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
+            android:text="                                                                                                             欢迎第5869位用户成为我们的会员，享受长达半年的海量资源"
+            android:textColor="#ffff0601" />
+    </FrameLayout>
+
+</LinearLayout>
