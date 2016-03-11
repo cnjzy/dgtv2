@@ -24,8 +24,18 @@ public class Utils {
 		"mp4/f002.mp4", "mp4/f004.mp4", "mp4/f005.mp4", 
 		"mp4/016.mp4", "mp4/017.mp4"
 	};
+	
+	private static String videoTopUrl2[] = {
+		"http://us.sinaimg.cn/001ZPPNpjx06WFne4nnW01040100QlwO0k01.mp4", "http://lxcdn.miaopai.com/stream/bQgr4HUgnKJiMUIJFqj8Fw__.mp4", 
+		"http://dlcdn.yixia.com/stream/RTCKL6z9wD2xN7xCOvh8gA__.mp4", "http://lxcdn.miaopai.com/stream/8l1YpF4cA7ApHFh3DTE~jw__.mp4"
+	};
+	
 	public static String getTopUrl(int position){
-		return imgBaseUrl + videoTopUrl[position];
+		if(position < videoMvUrl.length){
+			return imgBaseUrl + videoTopUrl[position];
+		}else{
+			return videoTopUrl2[position - videoMvUrl.length];
+		}
 	}
 	
 	private static String videoMvUrl[] = {

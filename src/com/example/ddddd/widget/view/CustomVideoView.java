@@ -1,4 +1,4 @@
-package com.imageview.switchview;
+package com.example.ddddd.widget.view;
 
 import android.content.Context;
 import android.util.AttributeSet;

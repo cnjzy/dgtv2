@@ -5,14 +5,15 @@ import java.util.Date;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.ddddd.adapter.BannerAdapter;
 import com.example.ddddd.utils.UMengUtils;
 import com.example.ddddd.utils.Utils;
-import com.imageview.switchview.Image3DSwitchView;
+import com.example.ddddd.widget.view.ChildViewPager;
+import com.example.ddddd.widget.view.PointWidget;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 public class MainActivity extends BaseActivity {
@@ -29,21 +30,17 @@ public class MainActivity extends BaseActivity {
 	private ImageView mv_3_3;
 	private ImageView mv_3_4;
 	private ImageView mv_3_5;
-	private Image3DSwitchView image_switch_view;
+	
 	private TextView refresh_date1;
 	private TextView refresh_date2;
 	private TextView refresh_date3;
+	private TextView refresh_date4;
+	
+	private ChildViewPager viewPager;
+	private BannerAdapter bannerAdapter;
+	private PointWidget pw;
 	
 	
-	private Handler handler = new Handler();
-	private Runnable loopRunnber = new Runnable() {
-		public void run() {
-			image_switch_view.scrollToNext();
-			handler.postDelayed(loopRunnber, 3000);
-		}
-	};
-	
-
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fragment_homepage);
@@ -62,16 +59,16 @@ public class MainActivity extends BaseActivity {
 		mv_3_4 = (ImageView) findViewById(R.id.mv_3_4);
 		mv_3_5 = (ImageView) findViewById(R.id.mv_3_5);
 
-		this.image_switch_view = ((Image3DSwitchView) findViewById(R.id.image_switch_view));
 		this.refresh_date1 = ((TextView) findViewById(R.id.refresh_date1));
 		this.refresh_date2 = ((TextView) findViewById(R.id.refresh_date2));
 		this.refresh_date3 = ((TextView) findViewById(R.id.refresh_date3));
+		this.refresh_date4 = ((TextView) findViewById(R.id.refresh_date4));
+		
 		String str = new SimpleDateFormat("MM-dd").format(new Date());
 		this.refresh_date1.setText("最近更新日期：" + str);
 		this.refresh_date2.setText("最近更新日期：" + str);
 		this.refresh_date3.setText("最近更新日期：" + str);
-		
-		handler.postDelayed(loopRunnber, 1000);
+		this.refresh_date4.setText("最近更新日期：" + str);
 		
 		ImageLoader.getInstance().displayImage(Utils.getImgPath(0), mv_1_4, MyApp.options, MyApp.animateFirstListener);
 		ImageLoader.getInstance().displayImage(Utils.getImgPath(1), mv_1_5, MyApp.options, MyApp.animateFirstListener);
@@ -86,31 +83,31 @@ public class MainActivity extends BaseActivity {
 		ImageLoader.getInstance().displayImage(Utils.getImgPath(10), mv_3_4, MyApp.options, MyApp.animateFirstListener);
 		ImageLoader.getInstance().displayImage(Utils.getImgPath(11), mv_3_5, MyApp.options, MyApp.animateFirstListener);
 		
+		viewPager = (ChildViewPager) findViewById(R.id.viewPager);
+		pw = (PointWidget) findViewById(R.id.litu_welcome_ponit);
+		bannerAdapter = new BannerAdapter(this, viewPager, pw);
+		viewPager.setAdapter(bannerAdapter);
 	}
 	
 	@Override
 	protected void onDestroy() {
-		handler.removeCallbacks(loopRunnber);
 		super.onDestroy();
 	}
 	
 	public void imageOnClick(View v) {
 		UMengUtils.addClickContnt(context);
 		switch(v.getId()){
-		case R.id.image1:
-			showDetailActivity(0, true, 0);
+		case R.id.image6:
+			showDetailActivity(0, true, 5);
 			break;
-		case R.id.image2:
-			showDetailActivity(0, true, 1);
+		case R.id.image7:
+			showDetailActivity(0, true, 6);
 			break;
-		case R.id.image3:
-			showDetailActivity(0, true, 2);
+		case R.id.image8:
+			showDetailActivity(0, true, 7);
 			break;
-		case R.id.image4:
-			showDetailActivity(0, true, 3);
-			break;
-		case R.id.image5:
-			showDetailActivity(0, true, 4);
+		case R.id.image9:
+			showDetailActivity(0, true, 8);
 			break;
 		case R.id.shikan_1:
 			VideoPlayerActivity.show(context, Utils.tv_shibo1, true, 20);
@@ -166,7 +163,7 @@ public class MainActivity extends BaseActivity {
 		}
 	}
 	
-	private void showDetailActivity(int position, boolean isTop, int index){
+	public void showDetailActivity(int position, boolean isTop, int index){
 		if(MyApp.p.getInt("userType", 0) == Utils.VIP){
 			if(isTop){
 				VideoPlayerActivity.show(context, Utils.getTopUrl(index), false, 0);

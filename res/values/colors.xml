@@ -19,4 +19,5 @@
     <color name="lightgreen">#ffaeff39</color>
     <color name="red">#ffdc1234</color>
     <color name="pink">#ffff5ea4</color>
+    <color name="transparent_gray">#50000000</color>
 </resources>
