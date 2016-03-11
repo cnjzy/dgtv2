@@ -37,12 +37,12 @@
                     android:layout_height="150dp"
                     android:background="@android:color/white" >
 
-                    <com.example.ddddd.widget.view.ChildViewPager
+                    <com.example.kctv.widget.view.ChildViewPager
                         android:id="@+id/viewPager"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent" />
 
-                    <com.example.ddddd.widget.view.PointWidget
+                    <com.example.kctv.widget.view.PointWidget
                         android:id="@+id/litu_welcome_ponit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
