@@ -98,7 +98,11 @@ public class Image3DSwitchView extends ViewGroup {
 			mImageWidth = (int) (mWidth * 0.6);
 			if (mCurrentImage >= 0 && mCurrentImage < mCount) {
 				mScroller.abortAnimation();
-				setScrollX(0);
+				try{
+					setScrollX(0);
+				}catch(Exception e){
+					e.printStackTrace();
+				}
 				int left = -mImageWidth * 2 + (mWidth - mImageWidth) / 2;
 				// 分别获取每个位置上应该显示的图片下标
 				int[] items = { getIndexForItem(1), getIndexForItem(2),

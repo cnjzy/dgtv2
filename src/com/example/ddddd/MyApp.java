@@ -68,7 +68,10 @@ public class MyApp extends Application {
 				.showImageOnLoading(R.drawable.f20_video_bg_w460_h300)
 				.showImageForEmptyUri(R.drawable.f20_video_bg_w460_h300)
 				.showImageOnFail(R.drawable.f20_video_bg_w460_h300)
-				.cacheInMemory(true).cacheOnDisk(true).considerExifParams(true)
+				.bitmapConfig(Bitmap.Config.RGB_565)    //设置图片的质量
+				.cacheInMemory(true)
+				.cacheOnDisk(true)
+				.considerExifParams(true)
 				// .displayer(new RoundedBitmapDisplayer(20))
 				.build();
 

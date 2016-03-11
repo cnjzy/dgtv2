@@ -9,7 +9,6 @@
         android:targetSdkVersion="21" />
 
     <!-- Required  一些系统要求的权限，如访问网络等 -->
-    <uses-permission android:name="com.example.ddddd.permission.JPUSH_MESSAGE" />
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -77,7 +76,7 @@
         </meta-data>
         <meta-data
             android:name="UMENG_CHANNEL"
-            android:value="80006" />
+            android:value="80041" />
 
         <!-- 支付 -->
         <!-- SDK　start -->

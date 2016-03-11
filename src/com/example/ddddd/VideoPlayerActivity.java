@@ -36,6 +36,7 @@ public class VideoPlayerActivity extends BaseActivity implements MediaPlayer.OnE
 
 	private boolean isTest = true;
 	private boolean isPlayer = true;
+	private boolean isStop = false;
 	private String videoUrl = "";
 	private int countDown;
 
@@ -106,7 +107,8 @@ public class VideoPlayerActivity extends BaseActivity implements MediaPlayer.OnE
 			// Play Video
 			mVideoView.setVideoURI(mUri);
 			mVideoView.start();
-		}else{
+			isStop = false;
+		} else {
 			finish();
 		}
 
@@ -114,22 +116,31 @@ public class VideoPlayerActivity extends BaseActivity implements MediaPlayer.OnE
 	}
 
 	public void onResume() {
-		if (isPlayer) {
-			// Resume video player
-			if (mPositionWhenPaused >= 0) {
-				mVideoView.seekTo(mPositionWhenPaused);
-				mPositionWhenPaused = -1;
+		try {
+			if (isPlayer) {
+				// Resume video player
+				if (mPositionWhenPaused >= 0) {
+					mVideoView.seekTo(mPositionWhenPaused);
+					mPositionWhenPaused = -1;
+				}
 			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 
 		super.onResume();
 	}
 
 	public void onPause() {
-		// Stop video when the activity is pause.
-		mPositionWhenPaused = mVideoView.getCurrentPosition();
-		mVideoView.stopPlayback();
-
+		try {
+			if (!isStop) {
+				mPositionWhenPaused = mVideoView.getCurrentPosition();
+				mVideoView.stopPlayback();
+				isStop = true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		super.onPause();
 	}
 
