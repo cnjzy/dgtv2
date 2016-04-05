@@ -19,61 +19,61 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int metaButtonBarStyle=0x7f010000;
     }
     public static final class color {
-        public static final int background_holo_light=0x7f050001;
-        public static final int black_1=0x7f050005;
-        public static final int black_2=0x7f050006;
-        public static final int black_3=0x7f050007;
-        public static final int black_4=0x7f050008;
-        public static final int blue=0x7f05000b;
-        public static final int blue_dark=0x7f05000c;
-        public static final int bookmarkListFaviconBackground=0x7f050000;
+        public static final int background_holo_light=0x7f070001;
+        public static final int black_1=0x7f070005;
+        public static final int black_2=0x7f070006;
+        public static final int black_3=0x7f070007;
+        public static final int black_4=0x7f070008;
+        public static final int blue=0x7f07000b;
+        public static final int blue_dark=0x7f07000c;
+        public static final int bookmarkListFaviconBackground=0x7f070000;
         /**  基础配色 
          */
-        public static final int bt_c1=0x7f05001c;
-        public static final int bt_c2=0x7f05001d;
-        public static final int bt_c3=0x7f05001e;
-        public static final int bt_c4=0x7f05001f;
-        public static final int bt_c5=0x7f050020;
-        public static final int bt_c6=0x7f050021;
-        public static final int bt_c7=0x7f050022;
-        public static final int card_background=0x7f050009;
-        public static final int grey=0x7f05000a;
-        public static final int lightgreen=0x7f050010;
-        public static final int new_tab_page_bg=0x7f050002;
-        public static final int pink=0x7f050012;
-        public static final int possible_result_points=0x7f05000f;
-        public static final int red=0x7f050011;
-        public static final int result_view=0x7f05000e;
-        public static final int transparent=0x7f050003;
-        public static final int viewfinder_mask=0x7f05000d;
-        public static final int white=0x7f050004;
+        public static final int bt_c1=0x7f07001c;
+        public static final int bt_c2=0x7f07001d;
+        public static final int bt_c3=0x7f07001e;
+        public static final int bt_c4=0x7f07001f;
+        public static final int bt_c5=0x7f070020;
+        public static final int bt_c6=0x7f070021;
+        public static final int bt_c7=0x7f070022;
+        public static final int card_background=0x7f070009;
+        public static final int grey=0x7f07000a;
+        public static final int lightgreen=0x7f070010;
+        public static final int new_tab_page_bg=0x7f070002;
+        public static final int pink=0x7f070012;
+        public static final int possible_result_points=0x7f07000f;
+        public static final int red=0x7f070011;
+        public static final int result_view=0x7f07000e;
+        public static final int transparent=0x7f070003;
+        public static final int viewfinder_mask=0x7f07000d;
+        public static final int white=0x7f070004;
         /**  白色 
          */
-        public static final int wp_c0=0x7f050013;
+        public static final int wp_c0=0x7f070013;
         /**  背景灰色 
          */
-        public static final int wp_c1=0x7f050014;
+        public static final int wp_c1=0x7f070014;
         /**  线灰色 
          */
-        public static final int wp_c2=0x7f050015;
+        public static final int wp_c2=0x7f070015;
         /**  默认字体颜色 
          */
-        public static final int wp_c3=0x7f050016;
+        public static final int wp_c3=0x7f070016;
         /**  默认字体颜色 
          */
-        public static final int wp_c4=0x7f050017;
+        public static final int wp_c4=0x7f070017;
         /**  透明色 
          */
-        public static final int wp_c5=0x7f050018;
+        public static final int wp_c5=0x7f070018;
         /**  橘红色 
          */
-        public static final int wp_c6=0x7f050019;
+        public static final int wp_c6=0x7f070019;
         /**  半透橘红色 
          */
-        public static final int wp_c7=0x7f05001a;
+        public static final int wp_c7=0x7f07001a;
         /**  灰色线 
          */
-        public static final int wp_c8=0x7f05001b;
+        public static final int wp_c8=0x7f07001b;
     }
     public static final class dimen {
         public static final int bbuton_rounded_corner_radius=0x7f080000;
@@ -127,9 +127,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class id {
         public static final int ali=0x7f090026;
-        public static final int d_background=0x7f090028;
-        public static final int d_show=0x7f090029;
-        public static final int d_timer=0x7f09002a;
+        public static final int d_background=0x7f090029;
+        public static final int d_show=0x7f09002a;
+        public static final int d_timer=0x7f09002b;
         public static final int image1=0x7f090004;
         public static final int image2=0x7f090005;
         public static final int image3=0x7f090006;
@@ -154,17 +154,18 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int mv_3_3=0x7f09001e;
         public static final int mv_3_4=0x7f09001f;
         public static final int mv_3_5=0x7f090020;
-        public static final int pay_icon=0x7f090033;
-        public static final int pay_key=0x7f090035;
-        public static final int pay_txt=0x7f090034;
+        public static final int pay_icon=0x7f090034;
+        public static final int pay_key=0x7f090036;
+        public static final int pay_txt=0x7f090035;
         public static final int refresh_date1=0x7f09000d;
         public static final int refresh_date2=0x7f090014;
         public static final int refresh_date3=0x7f09001b;
         public static final int shikan_1=0x7f09000a;
         public static final int shikan_2=0x7f09000b;
         public static final int text_detail=0x7f090022;
-        public static final int txt=0x7f09002d;
-        public static final int videoView1=0x7f090027;
+        public static final int txt=0x7f09002e;
+        public static final int unipay_id_WebView=0x7f090027;
+        public static final int videoView1=0x7f090028;
         public static final int video_count_down_tv=0x7f090002;
         public static final int video_view=0x7f090001;
         public static final int view=0x7f090025;
@@ -173,17 +174,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int view_top2=0x7f090013;
         public static final int view_top3=0x7f09001a;
         public static final int weixin=0x7f090024;
-        public static final int wp_err_but=0x7f09002c;
-        public static final int wp_err_t0=0x7f09002b;
-        public static final int wp_l_l0=0x7f090036;
-        public static final int wp_p_txt=0x7f090037;
-        public static final int wp_pay_but=0x7f090032;
-        public static final int wp_pl_t0=0x7f09002f;
-        public static final int wp_pl_t1=0x7f090030;
-        public static final int wp_pl_t2=0x7f090031;
-        public static final int wp_pl_t3=0x7f09002e;
-        public static final int wp_t_exit=0x7f090038;
-        public static final int wp_t_menu=0x7f090039;
+        public static final int wp_err_but=0x7f09002d;
+        public static final int wp_err_t0=0x7f09002c;
+        public static final int wp_l_l0=0x7f090037;
+        public static final int wp_p_txt=0x7f090038;
+        public static final int wp_pay_but=0x7f090033;
+        public static final int wp_pl_t0=0x7f090030;
+        public static final int wp_pl_t1=0x7f090031;
+        public static final int wp_pl_t2=0x7f090032;
+        public static final int wp_pl_t3=0x7f09002f;
+        public static final int wp_t_exit=0x7f090039;
+        public static final int wp_t_menu=0x7f09003a;
     }
     public static final class layout {
         public static final int activity_detail=0x7f030000;
@@ -191,72 +192,88 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int fragment_homepage=0x7f030002;
         public static final int item_detail=0x7f030003;
         public static final int pay_dialog=0x7f030004;
-        public static final int welcome=0x7f030005;
-        public static final int wp_d_cover=0x7f030006;
-        public static final int wp_v_error=0x7f030007;
-        public static final int wp_v_item=0x7f030008;
-        public static final int wp_v_pay=0x7f030009;
-        public static final int wp_v_pitem=0x7f03000a;
-        public static final int wp_v_plist=0x7f03000b;
-        public static final int wp_v_progress=0x7f03000c;
-        public static final int wp_v_titlebar=0x7f03000d;
+        public static final int unipay_layout_common_web=0x7f030005;
+        public static final int welcome=0x7f030006;
+        public static final int wp_d_cover=0x7f030007;
+        public static final int wp_v_error=0x7f030008;
+        public static final int wp_v_item=0x7f030009;
+        public static final int wp_v_pay=0x7f03000a;
+        public static final int wp_v_pitem=0x7f03000b;
+        public static final int wp_v_plist=0x7f03000c;
+        public static final int wp_v_progress=0x7f03000d;
+        public static final int wp_v_titlebar=0x7f03000e;
     }
     public static final class raw {
         public static final int video=0x7f040000;
     }
     public static final class string {
-        public static final int app_name=0x7f060000;
+        public static final int action_settings=0x7f050001;
+        public static final int app_name=0x7f050000;
         /**  基础计费信息 
          */
-        public static final int bt_t0=0x7f06000a;
-        public static final int bt_t1=0x7f06000b;
-        public static final int bt_t10=0x7f060014;
-        public static final int bt_t11=0x7f060015;
-        public static final int bt_t12=0x7f060016;
-        public static final int bt_t13=0x7f060017;
-        public static final int bt_t14=0x7f060018;
-        public static final int bt_t15=0x7f060019;
-        public static final int bt_t16=0x7f06001a;
-        public static final int bt_t17=0x7f06001b;
-        public static final int bt_t18=0x7f06001c;
-        public static final int bt_t19=0x7f06001d;
-        public static final int bt_t2=0x7f06000c;
-        public static final int bt_t20=0x7f06001e;
-        public static final int bt_t3=0x7f06000d;
-        public static final int bt_t4=0x7f06000e;
-        public static final int bt_t5=0x7f06000f;
-        public static final int bt_t6=0x7f060010;
-        public static final int bt_t7=0x7f060011;
-        public static final int bt_t8=0x7f060012;
-        public static final int bt_t9=0x7f060013;
-        public static final int wp_bar_t0=0x7f060001;
-        public static final int wp_pay_bt0=0x7f060008;
-        public static final int wp_pay_bt1=0x7f060009;
-        public static final int wp_pay_t0=0x7f060002;
-        public static final int wp_pay_t1=0x7f060003;
-        public static final int wp_pay_t2=0x7f060004;
-        public static final int wp_pay_t3=0x7f060005;
-        public static final int wp_pay_t4=0x7f060006;
-        public static final int wp_pay_t5=0x7f060007;
+        public static final int bt_t0=0x7f05000c;
+        public static final int bt_t1=0x7f05000d;
+        public static final int bt_t10=0x7f050016;
+        public static final int bt_t11=0x7f050017;
+        public static final int bt_t12=0x7f050018;
+        public static final int bt_t13=0x7f050019;
+        public static final int bt_t14=0x7f05001a;
+        public static final int bt_t15=0x7f05001b;
+        public static final int bt_t16=0x7f05001c;
+        public static final int bt_t17=0x7f05001d;
+        public static final int bt_t18=0x7f05001e;
+        public static final int bt_t19=0x7f05001f;
+        public static final int bt_t2=0x7f05000e;
+        public static final int bt_t20=0x7f050020;
+        public static final int bt_t3=0x7f05000f;
+        public static final int bt_t4=0x7f050010;
+        public static final int bt_t5=0x7f050011;
+        public static final int bt_t6=0x7f050012;
+        public static final int bt_t7=0x7f050013;
+        public static final int bt_t8=0x7f050014;
+        public static final int bt_t9=0x7f050015;
+        public static final int hello_world=0x7f050002;
+        public static final int wp_bar_t0=0x7f050003;
+        public static final int wp_pay_bt0=0x7f05000a;
+        public static final int wp_pay_bt1=0x7f05000b;
+        public static final int wp_pay_t0=0x7f050004;
+        public static final int wp_pay_t1=0x7f050005;
+        public static final int wp_pay_t2=0x7f050006;
+        public static final int wp_pay_t3=0x7f050007;
+        public static final int wp_pay_t4=0x7f050008;
+        public static final int wp_pay_t5=0x7f050009;
     }
     public static final class style {
-        public static final int AppBaseTheme=0x7f070000;
-        public static final int AppTheme=0x7f070001;
-        public static final int Float=0x7f07000e;
+        /** 
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    
+
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        
+         */
+        public static final int AppBaseTheme=0x7f060000;
+        /**  Application theme. 
+ All customizations that are NOT specific to a particular API-level can go here. 
+         */
+        public static final int AppTheme=0x7f060001;
+        public static final int Float=0x7f06000e;
         /**  对话框 
          */
-        public static final int FullDialog=0x7f07000d;
-        public static final int PayDialogTheme=0x7f070002;
-        public static final int font_14_9A9A9A=0x7f070004;
-        public static final int font_14_FF7E2C=0x7f070006;
-        public static final int font_16_000000=0x7f070005;
-        public static final int font_16_9A9A9A=0x7f070003;
-        public static final int font_16_FF7E2C=0x7f070007;
-        public static final int text_13_666666=0x7f070009;
-        public static final int text_15_FF9326=0x7f07000c;
-        public static final int text_16_000000=0x7f07000a;
-        public static final int text_16_666666=0x7f07000b;
-        public static final int text_16_B8B8B8=0x7f070008;
+        public static final int FullDialog=0x7f06000d;
+        public static final int PayDialogTheme=0x7f060002;
+        public static final int font_14_9A9A9A=0x7f060004;
+        public static final int font_14_FF7E2C=0x7f060006;
+        public static final int font_16_000000=0x7f060005;
+        public static final int font_16_9A9A9A=0x7f060003;
+        public static final int font_16_FF7E2C=0x7f060007;
+        public static final int text_13_666666=0x7f060009;
+        public static final int text_15_FF9326=0x7f06000c;
+        public static final int text_16_000000=0x7f06000a;
+        public static final int text_16_666666=0x7f06000b;
+        public static final int text_16_B8B8B8=0x7f060008;
     }
     public static final class styleable {
         /** 
