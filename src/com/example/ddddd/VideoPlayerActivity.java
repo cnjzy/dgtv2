@@ -16,10 +16,7 @@ import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
-import com.example.ddddd.utils.DialogUtils;
-import com.example.ddddd.utils.DialogUtils.OnAlertSelectId;
 import com.example.ddddd.utils.Utils;
-import com.wo.main.WP_SDK;
 
 public class VideoPlayerActivity extends BaseActivity implements
 		MediaPlayer.OnErrorListener, MediaPlayer.OnCompletionListener {
@@ -73,8 +70,6 @@ public class VideoPlayerActivity extends BaseActivity implements
 			mMediaController = new MediaController(this);
 			mVideoView.setMediaController(mMediaController);
 		}else{
-			// 支付SDK
-			WP_SDK.on_Init(this, null);
 			
 			video_count_down_tv.setVisibility(View.VISIBLE);
             contDownTimer = new CountDownTimer(countDown * 1000, 1000) {  
@@ -86,16 +81,17 @@ public class VideoPlayerActivity extends BaseActivity implements
                     	video_count_down_tv.setText("试播还剩：0秒");
                     	mVideoView.pause();
                     	isPlayer = false;
-                    	DialogUtils.showPayDialog(context, new OnAlertSelectId() {
-							public void onClick(int whichButton, Object o) {
-								getOrder(Utils.amount, whichButton, 2);
-							}
-						});
+                    	getOrder(Utils.amount, 1, 2);
+//                    	DialogUtils.showPayDialog(context, new OnAlertSelectId() {
+//							public void onClick(int whichButton, Object o) {
+//								getOrder(Utils.amount, whichButton, 2);
+//							}
+//						});
                     }
                 }  
              }.start(); 
 		}
-		
+		System.err.println("videoUrl:" + videoUrl);
 		// Video file
 		mUri = Uri.parse(videoUrl);
 	}

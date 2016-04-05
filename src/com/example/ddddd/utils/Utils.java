@@ -6,37 +6,45 @@ public class Utils {
 	/**
 	 * 总金额
 	 */
-	public static final int amount = 38;
+//	public static final int amount = 38;
+	public static final int amount = 1;
 	
 	private final static String baseUrl = "http://api.76iw.com/";
 	private final static String imgBaseUrl = "http://v.masmag.com.cn/dsfgfhsfsas/";
 	public final static String URL_GET_ORDER = baseUrl + "order/createOrder/";
 	
 	private static String imgs[] = {
-			"img/v004.jpg", "img/v005.jpg", "img/v006.jpg", 
-			"img/v007.jpg", "img/v008.jpg", "img/v009.jpg", 
-			"img/v010.jpg", "img/v011.jpg", "img/v012.jpg", 
-			"img/v013.jpg", "img/v014.jpg", "img/v015.jpg", 
+		imgBaseUrl + "img/v004.jpg", imgBaseUrl + "img/v005.jpg", imgBaseUrl + "img/v006.jpg", 
+		imgBaseUrl + "img/v007.jpg", imgBaseUrl + "img/v008.jpg", imgBaseUrl + "img/v009.jpg", 
+		imgBaseUrl + "img/v010.jpg", imgBaseUrl + "img/v011.jpg", imgBaseUrl + "img/v012.jpg", 
+		imgBaseUrl + "img/v013.jpg", imgBaseUrl + "img/v014.jpg", imgBaseUrl + "img/v015.jpg", 
 	};
 	
 	
 	private static String videoTopUrl[] = {
-		"mp4/f002.mp4", "mp4/f004.mp4", "mp4/f005.mp4", 
-		"mp4/016.mp4", "mp4/017.mp4"
+		"http://150wz.com/vipvideo/xdy0007.mp4?key=a2f2fcec71f5f444331722c0bcac8835&time=570355e1", 
+		"http://150wz.com/vipvideo/xdy0006.mp4?key=a73a4077f88457b84ca20bc89f70634e&time=570355d3", 
+		"http://video.150wz.com:10086/pb/pb0010.MP4", 
+		"http://150wz.com/vipvideo/xdy0008.mp4?key=d880fc94dc5f99f84b34fb8d171ea60b&time=570353fe", 
+		"http://150wz.com/vipvideo/xdy0008.mp4?key=d880fc94dc5f99f84b34fb8d171ea60b&time=570353fe"
 	};
 	public static String getTopUrl(int position){
-		return imgBaseUrl + videoTopUrl[position];
+		return videoTopUrl[position];
 	}
 	
 	private static String videoMvUrl[] = {
-		"mp4/001.mp4", "mp4/002.mp4", "mp4/003.mp4", 
-		"mp4/004.mp4", "mp4/005.mp4", "mp4/006.mp4", 
-		"mp4/007.mp4", "mp4/008.mp4", "mp4/009.mp4", 
-		"mp4/010.mp4", "mp4/011.mp4", "mp4/012.mp4", 
-		"mp4/013.mp4", "mp4/014.mp4", "mp4/015.mp4", 
+		"http://150wz.com/vipvideo/xdy0008.mp4?key=d880fc94dc5f99f84b34fb8d171ea60b&time=570353fe",
+		"http://150wz.com/vipvideo/xdy0008.mp4?key=d880fc94dc5f99f84b34fb8d171ea60b&time=570353fe",
+		"http://150wz.com/vipvideo/xdy0007.mp4?key=a2f2fcec71f5f444331722c0bcac8835&time=570355e1",
+		"http://150wz.com/vipvideo/xdy0006.mp4?key=a73a4077f88457b84ca20bc89f70634e&time=570355d3",
+		"http://video.150wz.com:10086/pb/pb0010.MP4",
+		"http://video.150wz.com:10086/pb/pb0019.MP4",
+		"http://150wz.com/uvideo/hg0015.MP4",
+		"http://150wz.com/uvideo/hg0030.MP4",
+		"http://appcdn.syingkj.com/video/mntk1/20140904mn10.mp4"
 	};
 	public static String getMvUrl(int position){
-		return imgBaseUrl + videoMvUrl[position];
+		return videoMvUrl[position % videoMvUrl.length];
 	}
 	
 	public static final String tv_shibo1 = imgBaseUrl + "mp4/f001.mp4";
@@ -48,6 +56,6 @@ public class Utils {
 	 * @return
 	 */
 	public static String getImgPath(int i){
-		return imgBaseUrl + imgs[i];
+		return imgs[i];
 	}
 }

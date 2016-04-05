@@ -73,18 +73,18 @@ public class MainActivity extends BaseActivity {
 		
 		handler.postDelayed(loopRunnber, 1000);
 		
-		ImageLoader.getInstance().displayImage(Utils.getImgPath(0), mv_1_4, MyApp.options, MyApp.animateFirstListener);
-		ImageLoader.getInstance().displayImage(Utils.getImgPath(1), mv_1_5, MyApp.options, MyApp.animateFirstListener);
-		ImageLoader.getInstance().displayImage(Utils.getImgPath(2), mv_2_1, MyApp.options, MyApp.animateFirstListener);
-		ImageLoader.getInstance().displayImage(Utils.getImgPath(3), mv_2_2, MyApp.options, MyApp.animateFirstListener);
-		ImageLoader.getInstance().displayImage(Utils.getImgPath(4), mv_2_3, MyApp.options, MyApp.animateFirstListener);
-		ImageLoader.getInstance().displayImage(Utils.getImgPath(5), mv_2_4, MyApp.options, MyApp.animateFirstListener);
-		ImageLoader.getInstance().displayImage(Utils.getImgPath(6), mv_2_5, MyApp.options, MyApp.animateFirstListener);
-		ImageLoader.getInstance().displayImage(Utils.getImgPath(7), mv_3_1, MyApp.options, MyApp.animateFirstListener);
-		ImageLoader.getInstance().displayImage(Utils.getImgPath(8), mv_3_2, MyApp.options, MyApp.animateFirstListener);
-		ImageLoader.getInstance().displayImage(Utils.getImgPath(9), mv_3_3, MyApp.options, MyApp.animateFirstListener);
-		ImageLoader.getInstance().displayImage(Utils.getImgPath(10), mv_3_4, MyApp.options, MyApp.animateFirstListener);
-		ImageLoader.getInstance().displayImage(Utils.getImgPath(11), mv_3_5, MyApp.options, MyApp.animateFirstListener);
+//		ImageLoader.getInstance().displayImage(Utils.getImgPath(0), mv_1_4, MyApp.options, MyApp.animateFirstListener);
+//		ImageLoader.getInstance().displayImage(Utils.getImgPath(1), mv_1_5, MyApp.options, MyApp.animateFirstListener);
+//		ImageLoader.getInstance().displayImage(Utils.getImgPath(2), mv_2_1, MyApp.options, MyApp.animateFirstListener);
+//		ImageLoader.getInstance().displayImage(Utils.getImgPath(3), mv_2_2, MyApp.options, MyApp.animateFirstListener);
+//		ImageLoader.getInstance().displayImage(Utils.getImgPath(4), mv_2_3, MyApp.options, MyApp.animateFirstListener);
+//		ImageLoader.getInstance().displayImage(Utils.getImgPath(5), mv_2_4, MyApp.options, MyApp.animateFirstListener);
+//		ImageLoader.getInstance().displayImage(Utils.getImgPath(6), mv_2_5, MyApp.options, MyApp.animateFirstListener);
+//		ImageLoader.getInstance().displayImage(Utils.getImgPath(7), mv_3_1, MyApp.options, MyApp.animateFirstListener);
+//		ImageLoader.getInstance().displayImage(Utils.getImgPath(8), mv_3_2, MyApp.options, MyApp.animateFirstListener);
+//		ImageLoader.getInstance().displayImage(Utils.getImgPath(9), mv_3_3, MyApp.options, MyApp.animateFirstListener);
+//		ImageLoader.getInstance().displayImage(Utils.getImgPath(10), mv_3_4, MyApp.options, MyApp.animateFirstListener);
+//		ImageLoader.getInstance().displayImage(Utils.getImgPath(11), mv_3_5, MyApp.options, MyApp.animateFirstListener);
 		
 	}
 	
@@ -136,6 +136,9 @@ public class MainActivity extends BaseActivity {
 		case R.id.mv_2_1:
 			showDetailActivity(1, false, 5);
 			break;
+		case R.id.mv_2_1_1:
+			showDetailActivity(1, false, 5);
+			break;
 		case R.id.mv_2_2:
 			showDetailActivity(1, false, 6);
 			break;
@@ -149,6 +152,9 @@ public class MainActivity extends BaseActivity {
 			showDetailActivity(1, false, 9);
 			break;
 		case R.id.mv_3_1:
+			showDetailActivity(2, false, 10);
+			break;
+		case R.id.mv_3_1_1:
 			showDetailActivity(2, false, 10);
 			break;
 		case R.id.mv_3_2:
@@ -167,16 +173,16 @@ public class MainActivity extends BaseActivity {
 	}
 	
 	private void showDetailActivity(int position, boolean isTop, int index){
-		if(MyApp.p.getInt("userType", 0) == Utils.VIP){
+//		if(MyApp.p.getInt("userType", 0) == Utils.VIP){
 			if(isTop){
 				VideoPlayerActivity.show(context, Utils.getTopUrl(index), false, 0);
 			}else{
 				VideoPlayerActivity.show(context, Utils.getMvUrl(index), false, 0);
 			}
-		}else{
-			Intent intent = new Intent(this, DetailActivity.class);
-			intent.putExtra("clickposition", position);
-			startActivity(intent);
-		}
+//		}else{
+//			Intent intent = new Intent(this, DetailActivity.class);
+//			intent.putExtra("clickposition", position);
+//			startActivity(intent);
+//		}
 	}
 }

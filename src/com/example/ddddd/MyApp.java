@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+import android.app.Application;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.view.View;
@@ -18,9 +19,8 @@ import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
-import com.wo.main.WP_App;
 
-public class MyApp extends WP_App {
+public class MyApp extends Application {
 
 	/**
 	 * 图片加载参数选项

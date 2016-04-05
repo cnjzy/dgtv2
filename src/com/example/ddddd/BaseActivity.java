@@ -6,21 +6,23 @@ import java.util.Map;
 import org.json.JSONObject;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.widget.Toast;
 
+import com.android.unipay.utils.UnipayLog;
 import com.example.ddddd.utils.DeviceUtils;
 import com.example.ddddd.utils.NetUtils;
+import com.example.ddddd.utils.PayUtils;
 import com.example.ddddd.utils.UMengUtils;
 import com.example.ddddd.utils.Utils;
 import com.umeng.analytics.MobclickAgent;
-import com.wo.main.WP_SDK;
 
 public class BaseActivity extends Activity {
 	protected BaseActivity context = this;
 	protected int pay_type = 1;
+	protected String TAG = this.getClass().getSimpleName();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -67,8 +69,7 @@ public class BaseActivity extends Activity {
 						JSONObject dataObj = jsonObj.getJSONObject("data");
 						if (!dataObj.isNull("order_no")) {
 							String orderNo = dataObj.getString("order_no");
-							//
-							WP_SDK.on_Recharge(String.valueOf(Utils.amount * 100), feeName, feeDesp, orderNo, pay_type - 1);
+							PayUtils.pay(context, orderNo, String.valueOf(Utils.amount), feeName, mHandler);
 						}
 					} else {
 						Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
@@ -80,6 +81,33 @@ public class BaseActivity extends Activity {
 				e.printStackTrace();
 			}
 		};
+	};
+	
+	protected Handler mHandler = new Handler(){
+
+		@Override
+		public void handleMessage(Message msg) {
+			switch(msg.what){
+			case 0:
+				Toast.makeText(context, "计费成功", Toast.LENGTH_LONG).show();
+				MyApp.p.putInt("userType", Utils.VIP);
+				if(context instanceof VideoPlayerActivity){
+					finish();
+				}
+				break;
+			case 1:
+				Toast.makeText(context, "计费失败", Toast.LENGTH_LONG).show();
+				UnipayLog.d(TAG,"计费失败");
+				UnipayLog.d(TAG,"错误码："+msg.getData().getString("errorCode"));
+				UnipayLog.d(TAG,"错误信息："+msg.getData().getString("errorMessage"));
+				if(context instanceof VideoPlayerActivity){
+					finish();
+				}
+				break;
+			}
+			super.handleMessage(msg);
+		}
+		
 	};
 
 	/**
@@ -106,27 +134,4 @@ public class BaseActivity extends Activity {
 		NetUtils.getPost(Utils.URL_GET_ORDER, params, handler);
 	}
 
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		super.onActivityResult(requestCode, resultCode, data);
-		try {
-			if (data != null) {
-				int code = data.getIntExtra("code", 1);
-				String value = data.getStringExtra("info");
-				if (resultCode == 0) {// 充值
-					if (code == 0) {// 充值成功
-						UMengUtils.addPaySuccess(context);
-						System.err.println("=======code=" + code + ",info=" + value);
-						MyApp.p.putInt("userType", Utils.VIP);
-						Toast.makeText(this, "充值成功!", Toast.LENGTH_LONG).show();
-						finish();
-					} else {// 充值失败
-
-					}
-				}
-			}
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
-	}
 }

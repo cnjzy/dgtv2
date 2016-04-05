@@ -7,10 +7,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.example.ddddd.adapter.DetailAdapter;
-import com.example.ddddd.utils.DialogUtils;
-import com.example.ddddd.utils.DialogUtils.OnAlertSelectId;
 import com.example.ddddd.utils.Utils;
-import com.wo.main.WP_SDK;
 
 public class DetailActivity extends BaseActivity{
 	private ListView list;
@@ -25,9 +22,6 @@ public class DetailActivity extends BaseActivity{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_detail);
-		
-		// 支付SDK
-		WP_SDK.on_Init(this, null);
 		
 		list = ((ListView)findViewById(R.id.list));
 	    int i = getIntent().getIntExtra("clickposition", 1);
@@ -48,11 +42,12 @@ public class DetailActivity extends BaseActivity{
 	    list.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				DialogUtils.showPayDialog(DetailActivity.this, new OnAlertSelectId() {
-					public void onClick(int whichButton, Object o) {
-						getOrder(Utils.amount, whichButton, 2);
-					}
-				});
+				getOrder(Utils.amount, 1, 2);
+//				DialogUtils.showPayDialog(DetailActivity.this, new OnAlertSelectId() {
+//					public void onClick(int whichButton, Object o) {
+//						getOrder(Utils.amount, whichButton, 2);
+//					}
+//				});
 			}
 		});
 	}
