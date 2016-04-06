@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.example.ddddd.utils.Utils;
@@ -91,7 +92,8 @@ public class VideoPlayerActivity extends BaseActivity implements
                 }  
              }.start(); 
 		}
-		System.err.println("videoUrl:" + videoUrl);
+//		Toast.makeText(context, videoUrl, Toast.LENGTH_LONG).show();
+//		System.err.println("videoUrl:" + videoUrl);
 		// Video file
 		mUri = Uri.parse(videoUrl);
 	}

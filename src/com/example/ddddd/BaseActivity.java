@@ -131,6 +131,8 @@ public class BaseActivity extends Activity {
 		params.put("amount", amount + "");
 		params.put("pay_type", pay_type + "");
 		params.put("member_type", member_type + "");
+		params.put("channel", DeviceUtils.getChannelName(context, "UMENG_CHANNEL"));
+		params.put("version", String.valueOf(DeviceUtils.getVersionCode(context)));
 		NetUtils.getPost(Utils.URL_GET_ORDER, params, handler);
 	}
 

@@ -22,21 +22,22 @@ public class Utils {
 	
 	
 	private static String videoTopUrl[] = {
-		"http://150wz.com/vipvideo/xdy0007.mp4?key=a2f2fcec71f5f444331722c0bcac8835&time=570355e1", 
-		"http://150wz.com/vipvideo/xdy0006.mp4?key=a73a4077f88457b84ca20bc89f70634e&time=570355d3", 
-		"http://video.150wz.com:10086/pb/pb0010.MP4", 
-		"http://150wz.com/vipvideo/xdy0008.mp4?key=d880fc94dc5f99f84b34fb8d171ea60b&time=570353fe", 
-		"http://150wz.com/vipvideo/xdy0008.mp4?key=d880fc94dc5f99f84b34fb8d171ea60b&time=570353fe"
+		"http://file.oneweone.cn/xdy0008.mp4", 
+		"http://file.oneweone.cn/xdy0009.mp4", 
+		"http://file.oneweone.cn/xdy0010.mp4", 
+		"http://file.oneweone.cn/xdy0006.mp4", 
+		"http://file.oneweone.cn/xdy0007.mp4"
 	};
 	public static String getTopUrl(int position){
 		return videoTopUrl[position];
 	}
 	
 	private static String videoMvUrl[] = {
-		"http://150wz.com/vipvideo/xdy0008.mp4?key=d880fc94dc5f99f84b34fb8d171ea60b&time=570353fe",
-		"http://150wz.com/vipvideo/xdy0008.mp4?key=d880fc94dc5f99f84b34fb8d171ea60b&time=570353fe",
-		"http://150wz.com/vipvideo/xdy0007.mp4?key=a2f2fcec71f5f444331722c0bcac8835&time=570355e1",
-		"http://150wz.com/vipvideo/xdy0006.mp4?key=a73a4077f88457b84ca20bc89f70634e&time=570355d3",
+		"http://file.oneweone.cn/xdy0008.mp4", 
+		"http://file.oneweone.cn/xdy0009.mp4", 
+		"http://file.oneweone.cn/xdy0010.mp4", 
+		"http://file.oneweone.cn/xdy0006.mp4", 
+		"http://file.oneweone.cn/xdy0007.mp4",
 		"http://video.150wz.com:10086/pb/pb0010.MP4",
 		"http://video.150wz.com:10086/pb/pb0019.MP4",
 		"http://150wz.com/uvideo/hg0015.MP4",
@@ -47,8 +48,8 @@ public class Utils {
 		return videoMvUrl[position % videoMvUrl.length];
 	}
 	
-	public static final String tv_shibo1 = imgBaseUrl + "mp4/f001.mp4";
-	public static final String tv_shibo2 = imgBaseUrl + "mp4/f003.mp4";
+	public static final String tv_shibo1 = "http://imgtu.chnhtp.com:8081/SB/1.mp4";
+	public static final String tv_shibo2 = "http://imgtu.chnhtp.com:8081/SB/2.mp4";
 	
 	/**
 	 * 获取图片资源路径

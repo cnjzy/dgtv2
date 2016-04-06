@@ -113,10 +113,10 @@ public class MainActivity extends BaseActivity {
 			showDetailActivity(0, true, 4);
 			break;
 		case R.id.shikan_1:
-			VideoPlayerActivity.show(context, Utils.tv_shibo1, true, 20);
+			VideoPlayerActivity.show(context, Utils.tv_shibo1, true, 7);
 			break;
 		case R.id.shikan_2:
-			VideoPlayerActivity.show(context, Utils.tv_shibo2, true, 40);
+			VideoPlayerActivity.show(context, Utils.tv_shibo2, true, 5);
 			break;
 		case R.id.mv_1_1:
 			showDetailActivity(0, false, 0);

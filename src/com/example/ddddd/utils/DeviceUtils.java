@@ -2,6 +2,7 @@ package com.example.ddddd.utils;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
@@ -39,5 +40,29 @@ public class DeviceUtils {
 	// 判断渠道号
     public static String getChannelName(Context cx, String meta_date) {
         return getAppMetaDate(cx).get(meta_date).toString();
+    }
+    
+    /**
+     * 获取当前程序的内部版本号
+     * 
+     * @param cx
+     * @return
+     */
+    public static int getVersionCode(Context cx) {
+        return getPackageInfo(cx).versionCode;
+    }
+    
+    /**
+     * 获得包信息
+     * 
+     * @param c
+     * @return
+     */
+    private static PackageInfo getPackageInfo(Context c) {
+        try {
+            return c.getPackageManager().getPackageInfo(c.getPackageName(), PackageManager.GET_CONFIGURATIONS);
+        } catch (NameNotFoundException e) {
+        }
+        return null;
     }
 }
