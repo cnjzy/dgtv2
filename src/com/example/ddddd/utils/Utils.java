@@ -6,8 +6,8 @@ public class Utils {
 	/**
 	 * 总金额
 	 */
-//	public static final int amount = 38;
-	public static final int amount = 1;
+	public static final int amount = 38;
+//	public static final int amount = 1;
 	
 	private final static String baseUrl = "http://api.76iw.com/";
 	private final static String imgBaseUrl = "http://v.masmag.com.cn/dsfgfhsfsas/";
