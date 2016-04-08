@@ -173,16 +173,16 @@ public class MainActivity extends BaseActivity {
 	}
 	
 	private void showDetailActivity(int position, boolean isTop, int index){
-//		if(MyApp.p.getInt("userType", 0) == Utils.VIP){
+		if(MyApp.p.getInt("userType", 0) == Utils.VIP){
 			if(isTop){
 				VideoPlayerActivity.show(context, Utils.getTopUrl(index), false, 0);
 			}else{
 				VideoPlayerActivity.show(context, Utils.getMvUrl(index), false, 0);
 			}
-//		}else{
-//			Intent intent = new Intent(this, DetailActivity.class);
-//			intent.putExtra("clickposition", position);
-//			startActivity(intent);
-//		}
+		}else{
+			Intent intent = new Intent(this, DetailActivity.class);
+			intent.putExtra("clickposition", position);
+			startActivity(intent);
+		}
 	}
 }

@@ -8,6 +8,7 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -127,4 +128,25 @@ public class BaseActivity extends Activity {
 		NetUtils.getPost(Utils.URL_GET_ORDER, params, handler);
 	}
 
+	protected Handler mHandler = new Handler(){
+
+		@Override
+		public void handleMessage(Message msg) {
+			// TODO Auto-generated method stub
+			switch(msg.what){
+			case 0:
+				Toast.makeText(context, "计费成功", Toast.LENGTH_LONG).show();
+				MyApp.p.putInt("userType", Utils.VIP);
+				if(context instanceof VideoPlayerActivity){
+					finish();
+				}
+				break;
+			case 1:
+				Toast.makeText(context, "计费失败", Toast.LENGTH_LONG).show();
+				break;
+			}
+			super.handleMessage(msg);
+		}
+		
+	};
 }
