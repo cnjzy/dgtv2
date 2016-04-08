@@ -1,4 +1,4 @@
-package com.oneweone.ddddd.procotol;
+package com.mole123ader.erzhan20156.procotol;
 
 import java.util.List;
 import java.util.Map;
@@ -7,7 +7,7 @@ import org.json.simple.BaseJson;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
-import com.oneweone.ddddd.vo.BaseVO;
+import com.mole123ader.erzhan20156.vo.BaseVO;
 import com.google.gson.reflect.TypeToken;
 
 public class BaseResponseMessage extends ResponseMessage {

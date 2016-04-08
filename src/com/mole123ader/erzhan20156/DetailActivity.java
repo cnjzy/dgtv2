@@ -1,4 +1,4 @@
-package com.oneweone.ddddd;
+package com.mole123ader.erzhan20156;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,10 +6,10 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-import com.oneweone.ddddd.adapter.DetailAdapter;
-import com.oneweone.ddddd.utils.DialogUtils;
-import com.oneweone.ddddd.utils.DialogUtils.OnAlertSelectId;
-import com.oneweone.ddddd.utils.Utils;
+import com.mole123ader.erzhan20156.adapter.DetailAdapter;
+import com.mole123ader.erzhan20156.utils.DialogUtils;
+import com.mole123ader.erzhan20156.utils.DialogUtils.OnAlertSelectId;
+import com.mole123ader.erzhan20156.utils.Utils;
 import com.wo.main.WP_SDK;
 
 public class DetailActivity extends BaseActivity{
@@ -53,6 +53,8 @@ public class DetailActivity extends BaseActivity{
 				});
 			}
 		});
+	    
+	    // 支付SDK初始化
 	    WP_SDK.on_Init(this);
 	}
 	

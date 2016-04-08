@@ -1,4 +1,4 @@
-package com.oneweone.ddddd.utils;
+package com.mole123ader.erzhan20156.utils;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;

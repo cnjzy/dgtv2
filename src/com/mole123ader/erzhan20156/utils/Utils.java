@@ -1,4 +1,4 @@
-package com.oneweone.ddddd.utils;
+package com.mole123ader.erzhan20156.utils;
 
 public class Utils {
 	
@@ -6,8 +6,8 @@ public class Utils {
 	/**
 	 * 总金额
 	 */
-//	public static final int amount = 38;
-	public static final int amount = 1;
+	public static final int amount = 38;
+//	public static final int amount = 1;
 	
 	private final static String baseUrl = "http://api.76iw.com/";
 	private final static String imgBaseUrl = "http://v.masmag.com.cn/dsfgfhsfsas/";
@@ -33,16 +33,10 @@ public class Utils {
 	}
 	
 	private static String videoMvUrl[] = {
-		"http://file.oneweone.cn/xdy0008.mp4", 
 		"http://file.oneweone.cn/xdy0009.mp4", 
 		"http://file.oneweone.cn/xdy0010.mp4", 
 		"http://file.oneweone.cn/xdy0006.mp4", 
 		"http://file.oneweone.cn/xdy0007.mp4",
-		"http://video.150wz.com:10086/pb/pb0010.MP4",
-		"http://video.150wz.com:10086/pb/pb0019.MP4",
-		"http://150wz.com/uvideo/hg0015.MP4",
-		"http://150wz.com/uvideo/hg0030.MP4",
-		"http://appcdn.syingkj.com/video/mntk1/20140904mn10.mp4"
 	};
 	public static String getMvUrl(int position){
 		return videoMvUrl[position % videoMvUrl.length];

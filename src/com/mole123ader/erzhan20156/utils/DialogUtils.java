@@ -1,4 +1,4 @@
-package com.oneweone.ddddd.utils;
+package com.mole123ader.erzhan20156.utils;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -11,7 +11,7 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.LinearLayout;
 
-import com.oneweone.ddddd.R;
+import com.mole123ader.erzhan20156.R;
 
 public class DialogUtils {
 	public interface OnAlertSelectId {

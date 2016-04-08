@@ -1,4 +1,4 @@
-package com.oneweone.ddddd;
+package com.mole123ader.erzhan20156;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -16,9 +16,9 @@ import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
-import com.oneweone.ddddd.utils.DialogUtils;
-import com.oneweone.ddddd.utils.DialogUtils.OnAlertSelectId;
-import com.oneweone.ddddd.utils.Utils;
+import com.mole123ader.erzhan20156.utils.DialogUtils;
+import com.mole123ader.erzhan20156.utils.DialogUtils.OnAlertSelectId;
+import com.mole123ader.erzhan20156.utils.Utils;
 import com.wo.main.WP_SDK;
 
 public class VideoPlayerActivity extends BaseActivity implements

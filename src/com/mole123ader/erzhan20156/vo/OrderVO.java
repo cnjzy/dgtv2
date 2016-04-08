@@ -1,4 +1,4 @@
-package com.oneweone.ddddd.vo;
+package com.mole123ader.erzhan20156.vo;
 
 public class OrderVO extends BaseVO{
 

@@ -1,4 +1,4 @@
-package com.oneweone.ddddd;
+package com.mole123ader.erzhan20156;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -10,8 +10,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.oneweone.ddddd.utils.UMengUtils;
-import com.oneweone.ddddd.utils.Utils;
+import com.mole123ader.erzhan20156.utils.UMengUtils;
+import com.mole123ader.erzhan20156.utils.Utils;
 import com.imageview.switchview.Image3DSwitchView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -173,16 +173,16 @@ public class MainActivity extends BaseActivity {
 	}
 	
 	private void showDetailActivity(int position, boolean isTop, int index){
-		if(MyApp.p.getInt("userType", 0) == Utils.VIP){
+//		if(MyApp.p.getInt("userType", 0) == Utils.VIP){
 			if(isTop){
 				VideoPlayerActivity.show(context, Utils.getTopUrl(index), false, 0);
 			}else{
 				VideoPlayerActivity.show(context, Utils.getMvUrl(index), false, 0);
 			}
-		}else{
-			Intent intent = new Intent(this, DetailActivity.class);
-			intent.putExtra("clickposition", position);
-			startActivity(intent);
-		}
+//		}else{
+//			Intent intent = new Intent(this, DetailActivity.class);
+//			intent.putExtra("clickposition", position);
+//			startActivity(intent);
+//		}
 	}
 }

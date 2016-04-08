@@ -1,4 +1,4 @@
-package com.oneweone.ddddd;
+package com.mole123ader.erzhan20156;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,10 +11,10 @@ import android.os.Handler;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.oneweone.ddddd.utils.DeviceUtils;
-import com.oneweone.ddddd.utils.NetUtils;
-import com.oneweone.ddddd.utils.UMengUtils;
-import com.oneweone.ddddd.utils.Utils;
+import com.mole123ader.erzhan20156.utils.DeviceUtils;
+import com.mole123ader.erzhan20156.utils.NetUtils;
+import com.mole123ader.erzhan20156.utils.UMengUtils;
+import com.mole123ader.erzhan20156.utils.Utils;
 import com.umeng.analytics.MobclickAgent;
 import com.wo.main.WP_SDK;
 import com.wo.plugin.WP_Event;

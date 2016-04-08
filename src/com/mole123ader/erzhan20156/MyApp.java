@@ -1,4 +1,4 @@
-package com.oneweone.ddddd;
+package com.mole123ader.erzhan20156;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -9,7 +9,7 @@ import android.graphics.Bitmap;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.oneweone.ddddd.utils.PreferencesUtils;
+import com.mole123ader.erzhan20156.utils.PreferencesUtils;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;

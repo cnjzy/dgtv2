@@ -1,4 +1,4 @@
-package com.oneweone.ddddd.adapter;
+package com.mole123ader.erzhan20156.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,8 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.oneweone.ddddd.R;
-import com.oneweone.ddddd.utils.ViewHolderUtil;
+import com.mole123ader.erzhan20156.R;
+import com.mole123ader.erzhan20156.utils.ViewHolderUtil;
 
 public class DetailAdapter extends BaseAdapter{
 	

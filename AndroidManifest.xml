@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.oneweone.ddddd"
-    android:versionCode="62"
-    android:versionName="6.2" >
+    package="com.mole123ader.erzhan20156"
+    android:versionCode="63"
+    android:versionName="6.3" >
 
     <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="21" />
 
     <!-- Required  一些系统要求的权限，如访问网络等 -->
-    <uses-permission android:name="com.oneweone.ddddd.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="com.mole123ader.erzhan20156.permission.JPUSH_MESSAGE" />
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -70,14 +70,14 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
-        android:name="com.oneweone.ddddd.MyApp"
+        android:name="com.mole123ader.erzhan20156.MyApp"
         android:configChanges="orientation|keyboardHidden|screenSize"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         android:theme="@android:style/Theme.NoTitleBar" >
         <activity
-            android:name="com.oneweone.ddddd.SplashActivity"
+            android:name="com.mole123ader.erzhan20156.SplashActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -86,13 +86,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.oneweone.ddddd.MainActivity"
+            android:name="com.mole123ader.erzhan20156.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.oneweone.ddddd.DetailActivity"
+            android:name="com.mole123ader.erzhan20156.DetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.oneweone.ddddd.VideoPlayerActivity"
+            android:name="com.mole123ader.erzhan20156.VideoPlayerActivity"
             android:screenOrientation="landscape" />
 
         <!-- 友盟 -->
@@ -269,32 +269,30 @@
         <!-- 应用ID -->
         <meta-data
             android:name="APPID"
-            android:value="WO2016040700003" >
+            android:value="WO2016040800004" >
         </meta-data>
         <!-- 应用标识 -->
         <meta-data
             android:name="APPKEY"
-            android:value="691e7fef0db1429a96d675155320b628" >
+            android:value="85aefc0779f8426885b0c2848764f2ff" >
         </meta-data>
         <!-- 应用秘钥 -->
         <meta-data
             android:name="APPSECRET"
-            android:value="ce4d6dfae7c64102a75bc9c47f4345e2" >
+            android:value="7f20041ff6c542f4bb70d79c84b112a1" >
         </meta-data>
         <!-- 应用配置数据 -->
         <meta-data
             android:name="APPDATA"
-            android:value="-100002_72_-10003544_492" >
+            android:value="-100002_72_-10003569_496" >
         </meta-data>
         <!-- 对应任意金额 -->
         <meta-data
             android:name="APPCODE"
-            android:value="05ecb4aa4cc1462a855a8de8ad0be2bb" >
+            android:value="15f978c5f1d44cf980bf25a38756e298" >
         </meta-data>
 
         <!-- 支付end -->
-        <meta-data>
-        </meta-data>
     </application>
 
 </manifest>

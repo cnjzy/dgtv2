@@ -1,4 +1,4 @@
-package com.oneweone.ddddd;
+package com.mole123ader.erzhan20156;
 
 import android.content.Intent;
 import android.media.MediaPlayer;

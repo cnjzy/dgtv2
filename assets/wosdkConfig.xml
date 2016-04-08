@@ -3,19 +3,19 @@
 <wosdkConfigs>
   <fees>
     <appFee> 
-      <productCode>05ecb4aa4cc1462a855a8de8ad0be2bb</productCode>  
+      <productCode>15f978c5f1d44cf980bf25a38756e298</productCode>  
       <fee>0</fee>  
       <feeName>任意金额商品名称</feeName>  
       <feeDesp>任意金额商品描述</feeDesp> 
     </appFee>
     <appFee> 
-      <productCode>e0a1bdf57aa4492496515f486f514855</productCode>  
+      <productCode>b28d2a74a080421ab1ef5fb173d8c579</productCode>  
       <fee>0</fee>  
       <feeName>包月用户</feeName>  
       <feeDesp>包月用户</feeDesp> 
     </appFee>
     <appFee> 
-      <productCode>4f84e09cdab149e9a2bb5396b8a34738</productCode>  
+      <productCode>a557b8066760464397e8f1aedf1df304</productCode>  
       <fee>0</fee>  
       <feeName>永久用户</feeName>  
       <feeDesp>永久用户</feeDesp> 
