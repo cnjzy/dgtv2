@@ -22,27 +22,20 @@ public class Utils {
 	
 	
 	private static String videoTopUrl[] = {
-		"http://file.oneweone.cn/xdy0008.mp4", 
 		"http://file.oneweone.cn/xdy0009.mp4", 
 		"http://file.oneweone.cn/xdy0010.mp4", 
 		"http://file.oneweone.cn/xdy0006.mp4", 
 		"http://file.oneweone.cn/xdy0007.mp4"
 	};
 	public static String getTopUrl(int position){
-		return videoTopUrl[position];
+		return videoTopUrl[position % videoTopUrl.length];
 	}
 	
 	private static String videoMvUrl[] = {
-		"http://file.oneweone.cn/xdy0008.mp4", 
 		"http://file.oneweone.cn/xdy0009.mp4", 
 		"http://file.oneweone.cn/xdy0010.mp4", 
 		"http://file.oneweone.cn/xdy0006.mp4", 
 		"http://file.oneweone.cn/xdy0007.mp4",
-		"http://video.150wz.com:10086/pb/pb0010.MP4",
-		"http://video.150wz.com:10086/pb/pb0019.MP4",
-		"http://150wz.com/uvideo/hg0015.MP4",
-		"http://150wz.com/uvideo/hg0030.MP4",
-		"http://appcdn.syingkj.com/video/mntk1/20140904mn10.mp4"
 	};
 	public static String getMvUrl(int position){
 		return videoMvUrl[position % videoMvUrl.length];

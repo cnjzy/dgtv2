@@ -14,9 +14,10 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.MediaController;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.example.ddddd.utils.DialogUtils;
+import com.example.ddddd.utils.DialogUtils.OnAlertSelectId;
 import com.example.ddddd.utils.Utils;
 
 public class VideoPlayerActivity extends BaseActivity implements
@@ -82,12 +83,12 @@ public class VideoPlayerActivity extends BaseActivity implements
                     	video_count_down_tv.setText("试播还剩：0秒");
                     	mVideoView.pause();
                     	isPlayer = false;
-                    	getOrder(Utils.amount, 1, 2);
-//                    	DialogUtils.showPayDialog(context, new OnAlertSelectId() {
-//							public void onClick(int whichButton, Object o) {
-//								getOrder(Utils.amount, whichButton, 2);
-//							}
-//						});
+//                    	getOrder(Utils.amount, 1, 2);
+                    	DialogUtils.showPayDialog(context, new OnAlertSelectId() {
+							public void onClick(int whichButton, Object o) {
+								getOrder(Utils.amount, whichButton, 2);
+							}
+						});
                     }
                 }  
              }.start(); 
